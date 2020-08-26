@@ -7,7 +7,15 @@
 module.exports = {
   siteName: '标题名称测试',
   siteDescription: '大前端',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BlogPost',
+        path: './content/blog/**/*.md',
+      }
+    }
+  ],
   templates: {
     Post: [
       {
